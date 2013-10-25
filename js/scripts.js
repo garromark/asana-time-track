@@ -154,7 +154,7 @@ $(function(){
         $.ajax({
               type: "GET",
               url: "request.php",
-              data: "apiKey=" + apiKeyCookie + "&updateId=" + getTaskId + "&estimatedHours=" + getEstimatedHours + "&estimatedMinutes=" + getEstimatedMinutes + "&workedHours=" + newHours + "&workedMinutes=" + newMinutes + "&taskName=" + getTaskName,
+              data: "apiKey=" + $.cookie('asana-api-key') + "&updateId=" + getTaskId + "&estimatedHours=" + getEstimatedHours + "&estimatedMinutes=" + getEstimatedMinutes + "&workedHours=" + newHours + "&workedMinutes=" + newMinutes + "&taskName=" + getTaskName,
               timeout: 30000,
               success: function( result ) {
                  // update was successful
